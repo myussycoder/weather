@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">WeatherApp</div>
+        <div class="search-container">
+            <input type="text" id="locationInput" placeholder="Enter location...">
+            <button id="searchButton">🔍</button>
+        </div>
+    </div>
+    <div class="current-weather">
+        <div class="location-name">Location</div>
+        <div class="temperature">25°C</div>
+        <div class="weather-icon">☀️</div>
+        <div class="description">Sunny</div>
+    </div>
+    <div class="forecast">
+        <div class="forecast-day">Mon <br>☁️ <br> 25°C / 15°C</div>
+        <div class="forecast-day">Tue <br>☀️ <br> 28°C / 18°C</div>
+        <div class="forecast-day">Wed <br>🌧️ <br> 22°C / 17°C</div>
+        <div class="forecast-day">Thu <br>⛅ <br> 26°C / 19°C</div>
+        <div class="forecast-day">Fri <br>🌤️ <br> 27°C / 20°C</div>
+        <div class="forecast-day">Sat <br>🌦️ <br> 24°C / 16°C</div>
+    </div>
+    <div class="settings">
+        <div class="setting-item">
+            <label>Temperature Units:</label>
+            <input type="radio" name="units" value="celsius" checked> Celsius
+            <input type="radio" name="units" value="fahrenheit"> Fahrenheit
+        </div>
+        <div class="setting-item">
+            <label>Theme:</label>
+            <input type="radio" name="theme" value="light" checked> Light
+            <input type="radio" name="theme" value="dark"> Dark
+        </div>
+        <button id="saveSettings">Save Settings</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
