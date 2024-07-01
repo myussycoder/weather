@@ -1,0 +1,168 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ECECEC;
+    color: #2E3A59;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.5s ease;
+}
+
+.header {
+    width: 100%;
+    background-color: #2E3A59;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+#locationInput {
+    height: 40px;
+    width: 200px;
+    padding: 0 10px;
+    border-radius: 5px 0 0 5px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    transition: width 0.5s ease;
+}
+
+#searchButton {
+    height: 40px;
+    width: 40px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#searchButton:hover {
+    background-color: #45A049;
+}
+
+.current-weather {
+    background-color: #4CAF50;
+    color: white;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.5s ease, transform 0.5s ease;
+}
+
+.current-weather:hover {
+    transform: scale(1.05);
+}
+
+.current-weather .location-name,
+.current-weather .temperature,
+.current-weather .weather-icon,
+.current-weather .description {
+    transition: opacity 0.5s ease;
+}
+
+.forecast {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.forecast-day {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #2E3A59;
+    opacity: 0;
+    animation: fadeInCard 0.5s forwards;
+    transition: transform 0.3s ease;
+}
+
+.forecast-day:hover {
+    transform: translateY(-10px);
+}
+
+@keyframes fadeInCard {
+    to {
+        opacity: 1;
+    }
+}
+
+.settings {
+    background-color: #F5F5F5;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.setting-item {
+    margin-bottom: 20px;
+}
+
+.setting-item label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+#saveSettings {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#saveSettings:hover {
+    background-color: #45A049;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .current-weather, .forecast-day, .settings {
+        width: 90%;
+    }
+
+    #locationInput {
+        width: 150px;
+    }
+}
